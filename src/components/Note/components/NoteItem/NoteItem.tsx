@@ -1,5 +1,4 @@
-import { MenuIcon } from 'assets/ts';
-import { BaseTag } from 'components';
+import { BaseTag, NoteDropDown } from 'components';
 import { INote } from 'components/Note/types';
 import { FC, ReactNode, memo } from 'react';
 import { tagColors } from '../constants';
@@ -13,17 +12,15 @@ const NoteItem: FC<INote> = ({ creator, date, description, priority, title, inde
   return (
     <div
       tabIndex={index}
-      className="border border-note-item rounded-lg p-3 flex flex-col gap-3 hover:border-note-hover cursor-pointer focus:border-2 focus:border-note-focus truncate bg-white"
+      className="border border-note-item rounded-lg p-3 flex flex-col gap-3 hover:border-note-hover cursor-pointer focus:border-2 focus:border-note-focus bg-white "
     >
-      <div className="flex items-center justify-between relative">
-        <div className="text-xs">
+      <div className="flex items-center justify-between">
+        <div className="text-xs truncate">
           {getNoteDate(date as Date)} <GraySpan>@</GraySpan>
           {getNoteTime(date as Date)} <GraySpan>by</GraySpan>
           {creator}
         </div>
-        <div className="absolute right-0 bg-white p-2">
-          <MenuIcon />
-        </div>
+        <NoteDropDown />
       </div>
       <div className="flex items-center gap-2">
         <h3 className="text-lg font-bold truncate">{title}</h3>

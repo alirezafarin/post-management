@@ -6,9 +6,12 @@ module.exports = {
       colors: {
         'light-gray': '#99999B',
         'lighter-gray': '#7E7E80',
+        error: '#C40808',
       },
       backgroundColor: {
         'light-gray': '#FBFAFA',
+        'option-hover': '#ECEDF0',
+        'option-click': '#CACACD',
       },
       borderColor: {
         'tab-active': '#67A0F0',

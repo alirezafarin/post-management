@@ -17,4 +17,12 @@ export const en = {
     info: 'Info',
     checked: 'Checked',
   },
+  notes: {
+    dropDown: {
+      title: 'Actions',
+      editNote: 'Edit Note',
+      delete: 'Delete',
+      changeStatus: 'Change Status to Checked',
+    },
+  },
 };
