@@ -6,4 +6,7 @@ export const en = {
   buttons: {
     addNote: 'Add Note',
   },
+  body: {
+    noPosts: 'No note added to this device yet',
+  },
 };
