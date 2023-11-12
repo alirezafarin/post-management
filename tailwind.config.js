@@ -7,6 +7,7 @@ module.exports = {
         'light-gray': '#99999B',
         'lighter-gray': '#7E7E80',
         error: '#C40808',
+        'input-label': '#CACACD',
       },
       backgroundColor: {
         'light-gray': '#FBFAFA',

@@ -25,4 +25,14 @@ export const en = {
       changeStatus: 'Change Status to Checked',
     },
   },
+  sidebar: {
+    addNewNote: 'Add New Note',
+    create: 'Create New Note',
+    edit: 'Edit Note',
+  },
+  note: {
+    title: 'Title',
+    priority: 'Priority',
+    description: 'Description',
+  },
 };
