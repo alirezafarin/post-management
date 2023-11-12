@@ -16,7 +16,7 @@ const NoteItem: FC<INote> = ({ creator, date, description, priority, title, inde
       className="border border-note-item rounded-lg p-3 flex flex-col gap-3 hover:border-note-hover cursor-pointer focus:border-2 focus:border-note-focus truncate bg-white"
     >
       <div className="flex items-center justify-between relative">
-        <div>
+        <div className="text-xs">
           {getNoteDate(date as Date)} <GraySpan>@</GraySpan>
           {getNoteTime(date as Date)} <GraySpan>by</GraySpan>
           {creator}
