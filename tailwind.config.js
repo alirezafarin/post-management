@@ -9,6 +9,9 @@ module.exports = {
       backgroundColor: {
         'light-gray': '#FBFAFA',
       },
+      borderColor: {
+        'tab-active': '#67A0F0',
+      },
     },
   },
   plugins: [],

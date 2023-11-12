@@ -9,4 +9,12 @@ export const en = {
   body: {
     noPosts: 'No note added to this device yet',
   },
+  tabs: {
+    all: 'All',
+    it: 'IT',
+    hr: 'HR',
+    critical: 'Critical',
+    info: 'Info',
+    checked: 'Checked',
+  },
 };

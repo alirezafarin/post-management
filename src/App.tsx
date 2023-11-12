@@ -1,10 +1,11 @@
-import { Header, NoNoteBody } from 'components';
+import { Header, TabList } from 'components';
 
 function App() {
   return (
     <div className="p-6 pt-0">
       <Header />
-      <NoNoteBody />
+      {/* <NoNoteBody /> */}
+      <TabList />
     </div>
   );
 }
