@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn-primary {
+  background-color: theme(colors.zinc.800);
+  color: theme(colors.white);
+  &:hover {
+    background-color: theme(colors.black);
+  }
+  &:focus {
+    background-color: theme(colors.zinc.500);
+  }
+}
