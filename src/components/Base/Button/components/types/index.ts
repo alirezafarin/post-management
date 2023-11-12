@@ -5,4 +5,5 @@ export interface IBaseIconBtnProps {
   icon: ReactNode;
   children?: ReactNode;
   variant?: Variants;
+  className?: string;
 }

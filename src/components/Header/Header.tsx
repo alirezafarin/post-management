@@ -1,9 +1,8 @@
 import MaxImage from 'assets/images/mac.png';
-import styles from './assets/styles/Header.module.css';
 import clsx from 'clsx';
+import { AddNoteButton } from 'components/AddNoteButton';
 import { en } from 'dictionary/en';
-import { AddIcon } from 'assets/ts';
-import { BaseIconBtn } from 'components/Base';
+import styles from './assets/styles/Header.module.css';
 
 export const Header = () => {
   return (
@@ -20,7 +19,7 @@ export const Header = () => {
           <p className="text-sm">{en.header.description}</p>
         </div>
       </div>
-      <BaseIconBtn icon={<AddIcon />}>{en.buttons.addNote}</BaseIconBtn>
+      <AddNoteButton />
     </div>
   );
 };
