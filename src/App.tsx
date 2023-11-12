@@ -1,4 +1,4 @@
-import { Header, TabList } from 'components';
+import { Header, NoteList, TabList } from 'components';
 
 function App() {
   return (
@@ -6,6 +6,7 @@ function App() {
       <Header />
       {/* <NoNoteBody /> */}
       <TabList />
+      <NoteList />
     </div>
   );
 }

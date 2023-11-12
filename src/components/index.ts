@@ -3,3 +3,4 @@ export * from './Base';
 export * from './AddNoteButton';
 export * from './NoNoteBody';
 export * from './TabList';
+export * from './Note';
