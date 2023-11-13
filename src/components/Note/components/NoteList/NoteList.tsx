@@ -1,63 +1,21 @@
-import { INote } from 'components/Note/types';
+import { useNotesContext } from 'hooks';
 import { NoteItem } from '../NoteItem';
-
-const notes: INote[] = [
-  {
-    id: 0,
-    date: new Date(),
-    creator: 'Alireza Afarin',
-    description: 'djf lsdkajflds sdkjflkds jflsdjf dsjflds jfldsjf ;lsdjfd sjfl',
-    priority: 'all',
-    title: 'fjdslkf jsdljfldsjf ldsjfl ds',
-  },
-  {
-    id: 1,
-    date: new Date(),
-    creator: 'Alireza Afarin',
-    description: 'djf lsdkajflds sdkjflkds jflsdjf dsjflds jfldsjf ;lsdjfd sjfl',
-    priority: 'all',
-    title: 'fjdslkf jsdljfldsjf ldsjfl ds',
-  },
-  {
-    id: 2,
-    date: new Date(),
-    creator: 'Alireza Afarin',
-    description: 'djf lsdkajflds sdkjflkds jflsdjf dsjflds jfldsjf ;lsdjfd sjfl',
-    priority: 'all',
-    title: 'fjdslkf jsdljfldsjf ldsjfl ds',
-  },
-  {
-    id: 3,
-    date: new Date(),
-    creator: 'Alireza Afarin',
-    description: 'djf lsdkajflds sdkjflkds jflsdjf dsjflds jfldsjf ;lsdjfd sjfl',
-    priority: 'all',
-    title: 'fjdslkf jsdljfldsjf ldsjfl ds',
-  },
-  {
-    id: 4,
-    date: new Date(),
-    creator: 'Alireza Afarin',
-    description: 'djf lsdkajflds sdkjflkds jflsdjf dsjflds jfldsjf ;lsdjfd sjfl',
-    priority: 'all',
-    title: 'fjdslkf jsdljfldsjf ldsjfl ds',
-  },
-  {
-    id: 5,
-    date: new Date(),
-    creator: 'Alireza Afarin',
-    description: 'djf lsdkajflds sdkjflkds jflsdjf dsjflds jfldsjf ;lsdjfd sjfl',
-    priority: 'all',
-    title: 'fjdslkf jsdljfldsjf ldsjfl ds',
-  },
-];
+import { NoNoteBody } from 'components/NoNoteBody';
+import { TabList } from 'components/TabList';
 
 export const NoteList = () => {
+  const { notes } = useNotesContext();
+
+  if (!notes.length) return <NoNoteBody />;
+
   return (
-    <div className="flex flex-col gap-4">
-      {notes.map((note, index) => (
-        <NoteItem key={note.id} {...note} index={index} />
-      ))}
-    </div>
+    <>
+      <TabList />
+      <div className="flex flex-col gap-4">
+        {notes.map((note, index) => (
+          <NoteItem key={note.id} {...note} index={index} />
+        ))}
+      </div>
+    </>
   );
 };

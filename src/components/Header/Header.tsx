@@ -3,8 +3,11 @@ import clsx from 'clsx';
 import { AddNoteButton } from 'components/AddNoteButton';
 import { en } from 'dictionary/en';
 import styles from './assets/styles/Header.module.css';
+import { useNotesContext } from 'hooks';
 
 export const Header = () => {
+  const { notes } = useNotesContext();
+
   return (
     <div
       className={clsx(
@@ -19,7 +22,7 @@ export const Header = () => {
           <p className="text-sm">{en.header.description}</p>
         </div>
       </div>
-      <AddNoteButton />
+      {notes.length ? <AddNoteButton /> : null}
     </div>
   );
 };

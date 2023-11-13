@@ -24,7 +24,7 @@ const NoteItem: FC<INote> = ({ creator, date, description, priority, title, inde
       </div>
       <div className="flex items-center gap-2">
         <h3 className="text-lg font-bold truncate">{title}</h3>
-        <BaseTag color={tagColors[priority]}>{priority}</BaseTag>
+        <BaseTag color={tagColors[priority.toLowerCase()]}>{priority as any}</BaseTag>
       </div>
       <div>
         <p className="text-sm truncate">{description}</p>

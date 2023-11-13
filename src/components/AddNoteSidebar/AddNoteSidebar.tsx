@@ -1,9 +1,9 @@
 import { AddNoteIcon, DoubleArrowIcon, EditNoteIcon } from 'assets/ts';
-import { BaseButton, BaseInput, BaseSelect, BaseSidebar, BaseTextarea } from 'components/Base';
-import { tabs } from 'constants/tabs';
+import { BaseSidebar } from 'components/Base';
 import { ISidebarContext, SidebarMode } from 'contexts';
 import { en } from 'dictionary/en';
 import { useSidebarContext } from 'hooks/useSidebarContext';
+import { CreateNoteForm } from './components';
 
 const utils: { [key in SidebarMode]: any } = {
   Create: {
@@ -38,27 +38,7 @@ export const AddNoteSidebar = () => {
             <h4 className="text-lg font-bold ml-2">{utils[type].formTitle}</h4>
           </div>
         </div>
-        <form
-          onSubmit={() => console.log('submit')}
-          className="flex flex-col gap-2 max-w-[420px] m-auto"
-        >
-          <BaseInput label={en.note.title} name="title" />
-          <BaseSelect label={en.note.priority} name="priority" options={tabs} />
-          <BaseTextarea label={en.note.description} name="description" rows={10} />
-          <div className="flex gap-3">
-            <BaseButton
-              onClick={closeSidebar}
-              className="w-screen p-3 d-flex justify-center"
-              variant="secondary"
-              type="button"
-            >
-              {en.sidebar.buttons.cancel}
-            </BaseButton>
-            <BaseButton type="submit" className="w-screen p-3 d-flex justify-center">
-              {utils[type].submitText}
-            </BaseButton>
-          </div>
-        </form>
+        <CreateNoteForm closeSidebar={closeSidebar} type={type} />
       </div>
     </BaseSidebar>
   );

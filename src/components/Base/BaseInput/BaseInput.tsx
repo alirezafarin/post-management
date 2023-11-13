@@ -6,6 +6,8 @@ export interface IBaseInputProps {
   inputProps?: Record<string, any>;
   name?: string;
   className?: string;
+  value: string;
+  onChange: (e: any) => void;
 }
 
 export const BaseInput: FC<IBaseInputProps> = ({
@@ -13,6 +15,8 @@ export const BaseInput: FC<IBaseInputProps> = ({
   name = '',
   className = '',
   inputProps,
+  value,
+  onChange,
 }) => {
   return (
     <div className="relative">
@@ -23,6 +27,8 @@ export const BaseInput: FC<IBaseInputProps> = ({
           className,
         )}
         placeholder=""
+        value={value}
+        onChange={onChange}
         {...inputProps}
       />
       <label

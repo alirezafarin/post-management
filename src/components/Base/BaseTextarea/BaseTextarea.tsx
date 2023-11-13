@@ -5,6 +5,8 @@ export interface IBaseTextareaProps {
   label: string;
   name?: string;
   className?: string;
+  value: string;
+  onChange: (e: any) => void;
   [key: string]: any;
 }
 
@@ -12,6 +14,8 @@ export const BaseTextarea: FC<IBaseTextareaProps> = ({
   label,
   name = '',
   className = '',
+  onChange,
+  value,
   ...props
 }) => {
   return (
@@ -23,6 +27,8 @@ export const BaseTextarea: FC<IBaseTextareaProps> = ({
           className,
         )}
         placeholder=""
+        value={value}
+        onChange={onChange}
         {...props}
       />
       <label

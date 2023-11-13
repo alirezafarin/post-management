@@ -8,12 +8,13 @@ export const BaseSelect: FC<IBaseSelectProps> = ({
   className,
   inputProps,
   options,
+  onChange,
+  value,
 }) => {
   const [open, setOpen] = useState(false);
-  const [value, setValue] = useState('');
 
   const onselect = (value: string) => {
-    setValue(value);
+    onChange(value);
     setOpen(false);
   };
 

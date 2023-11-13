@@ -1,4 +1,4 @@
-import { AddNoteSidebar, Header, NoNoteBody } from 'components';
+import { AddNoteSidebar, Header, NoteList } from 'components';
 import { Providers } from 'providers';
 
 function App() {
@@ -6,9 +6,7 @@ function App() {
     <Providers>
       <div className="p-6 pt-0">
         <Header />
-        <NoNoteBody />
-        {/* <TabList />
-      <NoteList /> */}
+        <NoteList />
         <AddNoteSidebar />
       </div>
     </Providers>

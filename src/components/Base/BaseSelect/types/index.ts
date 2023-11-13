@@ -4,6 +4,8 @@ export interface IBaseSelectProps {
   name?: string;
   className?: string;
   options: IOption[];
+  value: string;
+  onChange: (e: any) => void;
 }
 
 export interface IOption {
