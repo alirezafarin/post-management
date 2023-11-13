@@ -1,4 +1,4 @@
-import { AddNoteSidebar, Header, NoteList, TabList } from 'components';
+import { Header, NoteList, TabList } from 'components';
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       {/* <NoNoteBody /> */}
       <TabList />
       <NoteList />
-      <AddNoteSidebar />
+      {/* <AddNoteSidebar /> */}
     </div>
   );
 }

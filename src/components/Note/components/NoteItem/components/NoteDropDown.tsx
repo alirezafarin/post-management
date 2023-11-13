@@ -13,7 +13,7 @@ export const NoteDropDown = () => {
   ];
 
   return (
-    <div className="right-0 bg-white p-2">
+    <div className="right-0 bg-white">
       <BaseDropDown open={open} setOpen={setOpen} title={en.notes.dropDown.title}>
         <>
           {items.map(({ id, onClick, title, className = '' }) => (

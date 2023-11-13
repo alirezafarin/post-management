@@ -24,7 +24,7 @@ export const AddNoteSidebar = () => {
           <h6>{utils['create'].title}</h6>
           <DoubleArrowIcon />
         </div>
-        <div className="flex align-center justify-center mt-6">
+        <div className="flex align-center justify-center my-6">
           <div className="flex align-center justify-center">
             {utils['create'].icon}
             <h4 className="text-lg font-bold ml-2">{utils['create'].formTitle}</h4>
