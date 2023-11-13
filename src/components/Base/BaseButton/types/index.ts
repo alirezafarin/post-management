@@ -6,4 +6,6 @@ export interface IBaseBtnProps {
   children?: ReactNode;
   variant?: Variants;
   className?: string;
+  onClick?: (e: any) => void;
+  [key: string]: any;
 }

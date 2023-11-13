@@ -1,14 +1,17 @@
-import { Header, NoNoteBody } from 'components';
+import { AddNoteSidebar, Header, NoNoteBody } from 'components';
+import { Providers } from 'providers';
 
 function App() {
   return (
-    <div className="p-6 pt-0">
-      <Header />
-      <NoNoteBody />
-      {/* <TabList />
+    <Providers>
+      <div className="p-6 pt-0">
+        <Header />
+        <NoNoteBody />
+        {/* <TabList />
       <NoteList /> */}
-      {/* <AddNoteSidebar /> */}
-    </div>
+        <AddNoteSidebar />
+      </div>
+    </Providers>
   );
 }
 

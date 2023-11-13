@@ -6,6 +6,8 @@ export const BaseButton = ({
   variant = 'primary',
   className = '',
   children = null,
+  onClick,
+  ...props
 }: IBaseBtnProps) => {
   return (
     <button
@@ -14,6 +16,8 @@ export const BaseButton = ({
         `btn-${variant}`,
         className,
       )}
+      onClick={onClick}
+      {...props}
     >
       {icon && <div className="pr-2">{icon}</div>}
       {children}
