@@ -8,7 +8,7 @@ const GraySpan = ({ children }: { children: ReactNode }) => (
   <span className="text-lighter-gray px-1">{children}</span>
 );
 
-const NoteItem: FC<INote> = ({ creator, date, description, priority, title, index = 0 }) => {
+const NoteItem: FC<INote> = ({ creator, date, description, priority, title, index = 0, id }) => {
   return (
     <div
       tabIndex={index}
@@ -20,7 +20,7 @@ const NoteItem: FC<INote> = ({ creator, date, description, priority, title, inde
           {getNoteTime(date as Date)} <GraySpan>by</GraySpan>
           {creator}
         </div>
-        <NoteDropDown />
+        <NoteDropDown noteId={id} />
       </div>
       <div className="flex items-center gap-2">
         <h3 className="text-lg font-bold truncate">{title}</h3>

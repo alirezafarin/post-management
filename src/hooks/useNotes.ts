@@ -9,5 +9,13 @@ export const useNotes = (): INotesContext => {
 
   const addNote = (newNote: INote) => setNotes((prevNotes) => [...prevNotes, newNote]);
 
-  return { notes, addNote, activeTab, setActiveTab };
+  const editNote = ({ id, newNote }: { newNote: INote; id: string | number }) =>
+    setNotes((prevNotes) => {
+      return prevNotes.map((note) => {
+        if (note.id === id) return { ...note, ...newNote };
+        return note;
+      });
+    });
+
+  return { notes, addNote, activeTab, setActiveTab, editNote };
 };

@@ -6,4 +6,5 @@ export const sidebarContext = createContext<ISidebarContext>({
   type: 'Create',
   setSidebarProps: () => {},
   closeSidebar: () => {},
+  noteId: '',
 });

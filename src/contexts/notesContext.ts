@@ -6,4 +6,5 @@ export const notesContext = createContext<INotesContext>({
   addNote: () => {},
   activeTab: 'all',
   setActiveTab: () => {},
+  editNote: () => {},
 });

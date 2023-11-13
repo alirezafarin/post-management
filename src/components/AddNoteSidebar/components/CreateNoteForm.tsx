@@ -3,6 +3,7 @@ import { tabs } from 'constants/tabs';
 import { SidebarMode } from 'contexts';
 import { en } from 'dictionary/en';
 import useCreateNote from '../hooks/useCreateNote';
+import { useEditNote } from '../hooks';
 
 export const CreateNoteForm = ({
   closeSidebar,
@@ -11,7 +12,8 @@ export const CreateNoteForm = ({
   closeSidebar: () => void;
   type: SidebarMode;
 }) => {
-  const { onChange, onCreate, onEdit, values } = useCreateNote();
+  const { onChange, onCreate, values, setValues } = useCreateNote();
+  const { onEdit } = useEditNote({ values, setValues });
 
   const utils: { [key in SidebarMode]: { submitText: string; onSubmit: any } } = {
     Create: {

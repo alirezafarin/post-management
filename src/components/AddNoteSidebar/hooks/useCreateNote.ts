@@ -4,8 +4,8 @@ import { v4 } from 'uuid';
 
 const useCreateNote = () => {
   const { addNote } = useNotesContext();
-  const { closeSidebar } = useSidebarContext();
   const [values, setValues] = useState({ title: '', priority: '', description: '' });
+  const { closeSidebar } = useSidebarContext();
 
   const onChange = ({ name, newValue }: { name: string; newValue: string }) =>
     setValues((prevValues) => ({ ...prevValues, [name]: newValue }));
@@ -23,9 +23,7 @@ const useCreateNote = () => {
     closeSidebar();
   };
 
-  const onEdit = () => {};
-
-  return { values, onChange, onCreate, onEdit };
+  return { values, onChange, onCreate, setValues };
 };
 
 export default useCreateNote;
