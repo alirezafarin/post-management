@@ -1,12 +1,12 @@
 import clsx from 'clsx';
-import { IBaseIconBtnProps } from './types';
+import { IBaseBtnProps } from './types';
 
-export const BaseIconBtn = ({
-  icon,
+export const BaseButton = ({
+  icon = null,
   variant = 'primary',
   className = '',
   children = null,
-}: IBaseIconBtnProps) => {
+}: IBaseBtnProps) => {
   return (
     <button
       className={clsx(
@@ -15,7 +15,7 @@ export const BaseIconBtn = ({
         className,
       )}
     >
-      <div className="pr-2">{icon}</div>
+      {icon && <div className="pr-2">{icon}</div>}
       {children}
     </button>
   );

@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 import { Variants } from 'types';
 
-export interface IBaseIconBtnProps {
-  icon: ReactNode;
+export interface IBaseBtnProps {
+  icon?: ReactNode;
   children?: ReactNode;
   variant?: Variants;
   className?: string;

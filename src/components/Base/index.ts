@@ -1,4 +1,4 @@
-export * from './Button';
+export * from './BaseButton';
 export * from './BaseTab';
 export * from './BaseTag';
 export * from './BaseDropDown';

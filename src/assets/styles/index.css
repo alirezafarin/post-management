@@ -12,3 +12,15 @@
     background-color: theme(colors.zinc.500);
   }
 }
+
+.btn-secondary {
+  border: 1px solid #cacacd;
+  color: theme(colors.black);
+  &:hover {
+    background-color: #ecedf0;
+  }
+  &:focus {
+    background-color: theme(colors.black);
+    color: theme(colors.white);
+  }
+}
