@@ -29,6 +29,11 @@ export const en = {
     addNewNote: 'Add New Note',
     create: 'Create New Note',
     edit: 'Edit Note',
+    buttons: {
+      add: 'Add',
+      cancel: 'Cancel',
+      save: 'Save Changes',
+    },
   },
   note: {
     title: 'Title',
