@@ -1,7 +1,6 @@
-import { IBaseTabProps } from 'components';
 import { en } from 'dictionary/en';
 
-export const tabs: IBaseTabProps[] = [
+export const tabs = [
   {
     id: 0,
     name: en.tabs.all,
